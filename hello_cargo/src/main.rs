@@ -1,13 +1,18 @@
-fn sum(x: u32) -> u32 {
-    if x == 0 {
-        1
-    } else {
-        x * sum(x - 1)
-    }
+// fn factorial(x: u32) -> u32 {
+//     if x == 0 {
+//         1
+//     } else {
+//         x * factorial(x - 1)
+//     }
+// }
+
+
+fn sum(x: u32, y: u32) -> u32 {
+  x + y
+
+
+
 }
-// fn sum(x: u32, y: u32) -> u32 {
-//let z =x + y;
-// z;
 // }
 fn main() {
     // const MAX_POINTS: u32 = 100_000;
@@ -15,8 +20,11 @@ fn main() {
     // const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
     // const PI: f64 = 3.14159;
 
-    let y = sum(7);
-    println!("{y}");
+// let y=sum(5,4);
+// println!("{y}");
+
+    // let y = sum(7);
+    // println!("{y}");
 
     // let condition = true;
     // let number = if condition { 5 } else { 6 };
@@ -55,7 +63,8 @@ fn main() {
     // println!("{MAX_POINTS}");
     // println!("{THREE_HOURS_IN_SECONDS}");
 
-    // let x=x+1;
+    // let mut x= 0;
+    // x=x+1;
     // {
     //     let x = x*2;
     //     println!("The value of x is : {x}");
@@ -66,6 +75,6 @@ fn main() {
     // let tup = (500, 6.0, 4);
     // let (x, y, z) = tup;
     // {
-    //     println!("{x}");
+    //     println!("{y}");
     // }
 }
