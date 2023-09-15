@@ -7,12 +7,12 @@
 // }
 
 
-fn sum(x: u32, y: u32) -> u32 {
-  x + y
+// fn sum(x: u32, y: u32) -> u32 {
+//   x + y
 
 
 
-}
+// }
 // }
 fn main() {
     // const MAX_POINTS: u32 = 100_000;
@@ -77,4 +77,17 @@ fn main() {
     // {
     //     println!("{y}");
     // }
+    // let s1 = String::from("Hello");
+    // let s2=s1;
+    // println!("{}",s2);
+
+
+//ownership
+    let s1 = String::from("Hello");
+    takes_ownership(s1);
+
+
+}
+fn takes_ownership(str:String){
+    println!("{}",str)
 }
