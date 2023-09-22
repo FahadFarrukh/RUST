@@ -82,12 +82,191 @@ fn main() {
     // println!("{}",s2);
 
 
-//ownership
-    let s1 = String::from("Hello");
-    takes_ownership(s1);
+// //ownership
+//     let s1 = String::from("Hello");
+//     takes_ownership(s1);
 
 
+// }
+// fn takes_ownership(str:String){
+//     println!("{}",str)
+
+
+
+// let mut s = String::from("Hello");
+// change(&mut s);
+
+// let mut s=String::from("Hello");
+
+// let r1=&s;
+// let r2=&s;
+
+
+
+// println!("{},{}",r1,r2);
+// let r3=&mut s;
+// println!("{}",r3);
+
+// let r1=&s;
+// let r2=&s;
+
+// println!("{},{}",r1,r2);
+
+
+// let mut user1 = User {
+//     active : true ,
+//     sign_in_count : 1,
+//     username : String::from("Fahad Farrukh") ,
+//     email : String::from("fahadfarrukh26@gmail.com") ,
+    
+// };
+
+// let mut user2 = User {
+//     active : true ,
+//     username : String::from("Fahad") ,
+//     email : String::from("fahadfarrukh26@gmail.com123") ,
+//     sign_in_count : 1
+// };
+    
+
+// println!(" {}\n {}\n {}\n {}",user1.active,user1.username,user1.email,user1.sign_in_count);
+// println!("\n{}",user2.email);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let rect1 = Rectangle {
+//     width: 30,
+//     height: 50,
+//     };
+//     println!(
+//     "The area of the rectangle is {:?} square pixels."
+//     ,
+//     area(&rect1)
+//     );
+    // let rect1 = Rectangle {
+    //     width: 30,
+    //     height: 50,
+    //     };
+    //     println!("rect1 is {:#?}"
+    //     , rect1);
+        
+
+
+    // let scale = 2;
+    // let rect1 = Rectangle {
+    // width: dbg!(30 * scale),
+    // height: 50,
+    // };
+    // dbg!(&rect1);
+    
+
+
+
+
+
+
+
+
+    let rect1 = Rectangle {
+        width: 30,
+        height: 50,
+        };
+        println!(
+        "The area of the rectangle is {} square pixels."
+        ,
+        rect1.area()
+        );
+        
+
 }
-fn takes_ownership(str:String){
-    println!("{}",str)
+
+
+#[derive(Debug)]
+struct Rectangle {
+width: u32,
+height: u32,
 }
+impl Rectangle {
+fn area(&self) -> u32 {
+self.width * self.height
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #[derive(Debug)]
+// struct Rectangle {
+// width: u32,
+// height: u32,
+// }
+// fn area(rectangle: &Rectangle) -> u32 {
+//     rectangle.width * rectangle.height
+//     }
+    
+    // struct Rectangle {
+    //     width: u32,
+    //     height: u32,
+    //     }
+        
+
+
+
+
+
+// struct User {
+//     active:bool,
+//     username: String,
+//     email:String,
+//     sign_in_count:u64,
+// }
+
+
+// fn build_user(email: String, username: String) -> User {
+//     User {
+//     active: true,
+//     username,
+//     email,
+//     sign_in_count: 1,
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fn change(some_string:&mut String){
+//     some_string.push_str(" world");
+//     println!("{}",some_string)
+// }
