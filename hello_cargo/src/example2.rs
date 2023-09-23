@@ -140,3 +140,70 @@ println!("{}", greatest);
 
 
 }
+
+
+
+// #[derive(Debug)]
+// struct Rectangle {
+// width: u32,
+// height: u32,
+// }
+// fn main() {
+// let scale = 2;
+// let rect1 = Rectangle {
+// width: dbg!(30 * scale),
+// height: 50,
+// };
+// dbg!(&rect1);
+// }
+
+
+
+
+
+
+// struct Rectangle {
+//     width: u32,
+//     height: u32,
+//     }
+//     impl Rectangle {
+//     fn new(width:u32,height:u32) -> Self {
+//     Self{
+//         width,
+//         height
+//     }
+//     }
+//     }
+//     fn main() {
+//     let rect = Rectangle::new(10,20);
+//     println!(
+//     "The width is {} and the height is {}.",rect.width,rect.height);
+//     }
+    
+
+
+
+ 
+// struct Circle {
+//     radius:f64,
+//     }
+//     impl Circle {
+//     fn new(radius:f64) -> Self {
+//         Self{radius}
+//     }
+//     fn area(&self){
+        
+//         &self.radius*&self.radius*3.164;
+     
+//     }
+    
+//     }
+//     fn main() {
+//     let circle = Circle::new(20.0);
+//     let area=Circle::area(&circle);
+//     println!(
+//     "The radius is {}.",circle.radius);
+//     println!(
+//         "The area is {:?}.",&area);
+//     }
+       
