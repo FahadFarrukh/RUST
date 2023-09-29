@@ -1,56 +1,8 @@
-
-#[derive(Debug)]
-enum  Status{
-    Active,
-    Inactive,
-    Suspended
-}
-
-
-#[derive(Debug)]
-struct Book {
-title: String,
-author: String,
-pages: u32
-
-}
-impl Book {
-    fn new(title: String,author: String,pages: u32) -> Self {
-    Self{
-        title,
-        author,
-        pages
-        }
-    }
-    fn title(&self) -> &String {
-        &self.title
-    }
-    fn author(&self) -> &String {
-        &self.author
-    }
-}
-fn book_status(title:String,status:Status)->(String,Status){
-
-    match status {
-        Status::Active=>(title,status),
-        Status::Inactive=>(title,status),
-        Status::Suspended=>(title,status),
-
-    }
-
-}
-
-fn print_option(option: Option<i32>) {
-    match option {
-        Some(_) => println!("Has a value"),
-        None => println!("No value"),
-    }
-}
-
+use bookshelf::*;
 
 
 fn main() {
-    let book_1 = Book::new(String::from("Diary of a Wimpy Kid"),String::from("Jeff Kinney"),244);
+    let mut book_1 = Book::new(String::from("Diary of a Wimpy Kid"),String::from("Jeff Kinney"),244);
     println!("{:#?}",book_1);
     println!("\nTitle: {}", book_1.title());
 
@@ -67,4 +19,13 @@ fn main() {
     print_option(none_i32);
 
     println!("\nTitle: {}", book_1.author());
+
+    book_1.modify_title(String::from("DaVinci Code"));
+    println!("Modified Book: {:#?}", book_1);
+
+    let title = book_1.get_title();
+    println!("Title: {}", title);
+
+    // Function that borrows and modifies the title
+   
 }
