@@ -3,7 +3,7 @@ struct Date {
     month: u32,
     year: u32,
 }
-
+ 
 impl Date {
     fn new(day: u32, month: u32, year: u32) -> Date {
         Date { day, month, year }
@@ -13,7 +13,7 @@ impl Date {
     }
     fn month(&self) -> u32 {
         self.month
-    }
+    } 
     fn year(&self) -> u32 {
         self.year
     }

@@ -9,7 +9,7 @@ fn numbers(num1:u32)->String{
  
 }
 
-
+ 
 fn main(){
 let num=6;
 
@@ -270,4 +270,31 @@ println!("{}", greatest);
 
 //   //  print!("{:#?}",v);
 //   dbg!(v);
+// }
+
+
+
+// #![allow(unused_variables)]
+
+// fn main(){
+//     let mut v = vec![100,32,57];
+
+//    let first=&v[0];
+
+//    for i in &mut v{
+// *i +=50;
+// println!("{}",i);
+//    }
+// }
+
+// fn main() {
+//     let mut v = vec![100, 32, 57];
+//     v.push(5);
+
+//     println!("{:#?}", v);
+
+//     let second = &mut v[1]; // Get a mutable reference to the second element
+//     *second = 42; // Update the second element to the new value (e.g., 42)
+
+//     println!("{:#?}", v);
 // }
