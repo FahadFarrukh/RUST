@@ -1,20 +1,18 @@
 #[derive(Debug)]
-enum Option {
-    Text(String),
-    Number(u32),
-}
+struct Book {
+title: String,
 
-fn print(option: Option) {
-    match option {
-        Option::Text(text) => println!("Text: {}", text),
-        Option::Number(num) => println!("Number: {}", num),
+}
+impl Book {
+    fn new(title: String) -> Self {
+    Self{
+        title,
+        }
     }
 }
 
 fn main() {
-    let text_option = Option::Text(String::from("Hello, Rust!"));
-    let number_option = Option::Number(42);
-
-    print(text_option);
-    print(number_option);
+    let book_1 = Book::new(String::from("Diary of a Wimpy Kid"));
+    println!("{:#?}",book_1);
+ 
 }

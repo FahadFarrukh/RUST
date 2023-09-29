@@ -89,3 +89,37 @@
 //     print(number_option);
 // }
 
+//5.
+// fn append_world(input: &mut String) {
+//     input.push_str(" World!");
+// }
+
+// fn main() {
+//     let mut my_string = String::from("Hello");
+//     append_world(&mut my_string);
+//     println!("{}", my_string); // Prints "Hello World!"
+// }
+
+
+//6.
+// #[derive(Debug)]
+// struct Book {
+// title: String,
+
+// }
+// impl Book {
+//     fn new(title: String) -> Self {
+//     Self{
+//         title,
+//         }
+//     }
+// }
+
+// fn main() {
+//     let book_1 = Book::new(String::from("Diary of a Wimpy Kid"));
+//     println!("{:#?}",book_1);
+ 
+// }
+
+
+
