@@ -1,31 +1,26 @@
-use bookshelf::*;
+fn add(num1:u32,num2:u32)->u32{
+    num1+num2
+}
+fn sub(num1:i32,num2:i32)->i32{
+    num1-num2
+}
+fn mul(num1:u32,num2:u32)->u32{
+    num1*num2
+}
+fn div(num1:u32,num2:u32)->u32{
+    num1/num2
+}
 
+fn main(){
 
-fn main() {
-    let mut book_1 = Book::new(String::from("Diary of a Wimpy Kid"),String::from("Jeff Kinney"),244);
-    println!("{:#?}",book_1);
-    println!("\nTitle: {}", book_1.title());
+    let addition=add(5,6);
+    let subtract=sub(5,6);
+    let multiply=mul(5,6);
+    let divide=div(5,6);
 
-    let status=book_status(String::from("Diary of a Wimpy Kid"), Status::Active);
-    println!("\nStatus: {:#?}", status); 
+    println!("\nAddition = {}",addition);
+    println!("\nSubtraction = {}",subtract);
+    println!("\nMultiplication = {}",multiply);
+    println!("\nDivision = {}",divide);
 
-
-    let author=book_1.author();
-
-    let some_i32 = Some(10);
-    let none_i32: Option<i32> = None;
-
-    print_option(some_i32);
-    print_option(none_i32);
-
-    println!("\nTitle: {}", book_1.author());
-
-    book_1.modify_title(String::from("DaVinci Code"));
-    println!("Modified Book: {:#?}", book_1);
-
-    let title = book_1.get_title();
-    println!("Title: {}", title);
-
-    // Function that borrows and modifies the title
-   
 }
